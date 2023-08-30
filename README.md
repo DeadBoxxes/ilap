@@ -56,3 +56,9 @@ RUN"Desktop/tests/test.ilp"
 
 here is a really lon pr thing that needs to be wrapped but cant as it is far too long for whatever enviroment im using
 ```
+##closure
+thats really all so far, i have tons of others things so far i plan to add, but check the website for those
+this readme is meant to give a basic undertsnading of what you are getting yourself into
+message me if you have any questions!
+
+-2023 Deadboxxes (liap creator)
