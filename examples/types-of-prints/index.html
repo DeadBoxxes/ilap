@@ -74,20 +74,21 @@
   <h2>LPR</h2><i>using the LPR (loop print) feature</i><br><br>this tutorial shows you how to loop PRs win very little time, unlike the last tutorial, this one is super simple, and a very easy way to clogg up someones computer memory!<br>the "=9" after the "LPR"texthere"" can have its value replaced:<br>
    <p style="border:1px solid grey;width:500px;font-family:Courier;">
     LPR"some list things"=9<br>
+     LNBR<br>
     SV"loop.ilap"<br>
     RUN"loop.ilap
   </p>
   OUTPUT:
    <p style="border:1px solid grey;width:500px;font-family:Courier;">
-   some list things
-   some list things 
-   some list things  
-   some list things
-   some list things 
-   some list things 
-   some list things
-   some list things 
-   some list things    
+   some list things<br>
+   some list things<br>
+   some list things  <br>
+   some list things<br>
+   some list things <br>
+   some list things <br>
+   some list things<br>
+   some list things <br>
+   some list things    <br>
    </p>
   <br>BUT! say you wanted to make a numbered list, little did you know, i thought that through! ill provide 2 examples showing these capibilites...
   <br><br>
@@ -95,6 +96,7 @@
   <p style="border:1px solid grey;width:500px;font-family:Courier;">
     CHNG=X (+)1 ACTWHEN"LPR"
     LPR"[X]. thing"=5<br>
+    LNBR<br>
     SV"loop.ilap"<br>
     RUN"loop.ilap
   </p>
@@ -114,6 +116,7 @@
     SET=X 7 ACTWHEN"RUN"
     CHNG=X (+)1 ACTWHEN"LPR"
     LPR"April [X]"=12<br>
+    LNBR
     SV"loop.ilap"<br>
     RUN"loop.ilap
   </p>
