@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+  <title>the different typs of PR</title>
+</head>
+<body>
+  <h1>what is the "PR" action?</h1><hr>
+  The "PR" Action, short for "Print", is of of the main and best ways to display text on screen, there are many different kinds of PRs, here are a list of then
+  <h2>PR</h2><i>basic printing text on screen</i><br><br>this method of print is the most simple with no extra elements.<br>
+  <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    PR"hello world"<br>
+    SV"helloworld.ilap"<br>
+    RUN"helloworld.ilap<br>
+    <br>
+    <b>hello world</b>
+  </p>
+  OUTPUT:
+   <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    hello world
+  </p>  <h2>PRLNBR (Line break)</h2> <i>Adds a break in between the text</i><br><br>A much more sophisticated way of "decorating" prints, there are 3 examples i'll show, example one using PRLNBR, two other just using LNBR to break the lines, and three being how to add a 1 line gap between text.<br>
+  <li>Example 1</li><br><li>this example only adds a break between text, similar to how the "br" element works in HTML</li>
+  <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    PRLNBR"hello world"<br>
+    PR"down here!"
+    SV"helloworld.ilap"<br>
+    RUN"helloworld.ilap<br>
+  </p>
+  OUTPUT:
+   <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    hello world<br>
+    down here! 
+  </p>  <li>Example 2</li><br><i>This example shows how to add a break without using PRLNBR, instead, using a regular break (LNBR), not specified as a print, this makes things more complicated, and i dont recommend it...</i>
+  <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    PR"hello world"<br>
+    LNBR<br>
+    PR"down here, still!"<br>
+    SV"helloworld.ilap"<br>
+    RUN"helloworld.ilap<br>
+  </p>
+  OUTPUT:
+   <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    hello world<br>
+    down here, still!
+  </p>  <li>Example 3</li><br><i><b>However</b>, using LNBR by itself to print text CAN be helpful, take this for example, its used to add a gap between PRs, <mark>NOTE: remember to make the text printed BEFORE the LNBR in this tutorial a PRLNBR </mark></i>
+   <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    PRLNBR"hello"<br>
+    LNBR<br>
+    PR"world"<br>
+    SV"helloworld.ilap"<br>
+    RUN"helloworld.ilap<br>
+  </p>
+  OUTPUT:
+   <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    hello<br><br>world
+  </p>
+
+  <h2>Flashing PR</h2><i>This is not a "type" of PR, but this is a way to make your text "flashy", no pun intended.</i><br><br>this tutorial requires a bit of code, so if you arnet comfortable with labels and other more "advanced" things, i suggest you know a bit more about ilap before trying to mess around with this straight away...<br>
+   <br><mark>NOTE: the way this works in html might not be supported by every browser, unfortunatley the blink element has been widely retired, but its the best way i can show this without loosing even more site compatibility...</mark><br>
+   <p style="border:1px solid grey;width:500px;font-family:Courier;">
+     PR"flash" SETNAME"bl pr"
+     NAMEDEF"bl pr" START:
+     ACTWHEN"RUN"
+     STARTLOOP:
+     TIME"1000"
+     DISPLAYNAME 1 "bl pr"
+     TIME"1000"
+     DISPLAYNAME 0 "bl pr"
+     :STOPLOOP 
+     :NAMEDEF END
+     SV"blinkingtest.ilap"
+     RUN"blinkingtest.ilap
+   </p>
+  OUTPUT:
+   <p style="border:1px solid grey;width:500px;font-family:Courier;">
+     <blink>flash</blink>
+  </p>
+</body>
