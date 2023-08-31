@@ -16,9 +16,9 @@ lastly, the file type for ilap code is **.ilap**
 - the way ilap works is that every action goes on a seperate line,
 - because of this, note that if you wanna add breaks in text, please use PRLNBR instead of the regular PR, PRLNBR (Print LiNe BReak) is used to ad breaks between text, if you are extra lazy though or wanna make a blank break in the text, making a seperate line for a break works, this is just called LNBR... like this: (note that if you wanna add a blank space in between text, PRLNBR needs come after LNBR, if you use a regular PR it will act like a standard PRLNBR...
 ```
-PR"HELLO...."
+PRLNBR"HELLO...."
 LNBR
-PRLNBR"AAAND GOODBYE!!!!!!"
+PR"AAAND GOODBYE!!!!!!"
 SV"Desktop/tests/test.ilp"
 RUN"Desktop/tests/test.ilp"
 
