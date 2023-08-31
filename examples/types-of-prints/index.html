@@ -14,7 +14,7 @@
   OUTPUT:
    <p style="border:1px solid grey;width:500px;font-family:Courier;">
     hello world
-  </p>  <h2>PRLNBR (Line break)</h2> <i>Adds a break in between the text</i><br><br>A much more sophisticated way of "decorating" prints, there are 3 examples i'll show, example one using PRLNBR, two being the usage of just LNBR to break the lines, and three being how to add a 1 line gap between text.<br>
+  </p>  <h2>PRLNBR/LNBR (Line break)</h2> <i>Adds a break in between the text</i><br><br>A much more sophisticated way of "decorating" prints, there are 3 examples i'll show, example one using PRLNBR, two being the usage of just LNBR to break the lines, and three being how to add a 1 line gap between text.<br>
   <li>Example 1</li><br><i>this example only adds a break between text, similar to how the "br" element works in HTML</i>
   <p style="border:1px solid grey;width:500px;font-family:Courier;">
     PRLNBR"hello world"<br>
@@ -71,4 +71,66 @@
    <p style="border:1px solid grey;width:500px;font-family:Courier;">
      <blink>flash</blink>
   </p>
+  <h2>LPR</h2><i>using the LPR (loop print) feature</i><br><br>this tutorial shows you how to loop PRs win very little time, unlike the last tutorial, this one is super simple, and a very easy way to clogg up someones computer memory!<br>the "=9" after the "LPR"texthere"" can have its value replaced:<br>
+   <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    LPR"some list things"=9<br>
+    SV"loop.ilap"<br>
+    RUN"loop.ilap
+  </p>
+  OUTPUT:
+   <p style="border:1px solid grey;width:500px;font-family:Courier;">
+   some list things
+   some list things 
+   some list things  
+   some list things
+   some list things 
+   some list things 
+   some list things
+   some list things 
+   some list things    
+   </p>
+  <br>BUT! say you wanted to make a numbered list, little did you know, i thought that through! ill provide 2 examples showing these capibilites...
+  <br><br>
+  <li>Example 1</li><br>
+  <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    CHNG=X (+)1 ACTWHEN"LPR"
+    LPR"[X]. thing"=5<br>
+    SV"loop.ilap"<br>
+    RUN"loop.ilap
+  </p>
+  by setting the actwhen for <b>CHNG=X</b> as "LPR", the system already knows to change the X value by 1 per every loop... this is a little trick i call "planning ahead"... <mark>NOTE: X can be replaced with any letter, just remember to put it in squared brackets ([]) when X is in a PR action.</mark>
+  <br><br>OUTPUT:
+  <p style="border:1px solid grey;width:500px;font-family:Courier;">
+   1. thing<br>
+    2. thing<br>
+    3. thing<br>
+    4. thing<br>
+    5. thing
+  </p>
+<li>Example 2</li><br>
+  you can also use this for dates, no, no... not relationships, then she'll think you are a nerd!!! but instead for writting days of the year, this example will even show how to start at a specific day/value before the loop... in this example the day will start at 7. <mark>NOTE: you still have to specify an ACTWHEN when pre 
+  setting the value, i suggest setting the ACTWHEN to preform the action on run, unless you have other plans...</mark>
+  <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    SET=X 7 ACTWHEN"RUN"
+    CHNG=X (+)1 ACTWHEN"LPR"
+    LPR"April [X]"=12<br>
+    SV"loop.ilap"<br>
+    RUN"loop.ilap
+  </p>
+  OUTPUT:
+  <p style="border:1px solid grey;width:500px;font-family:Courier;">
+    April 7<br>
+    April 8<br>
+    April 9<br>
+    April 10<br>
+    April 11<br>
+    April 12<br>
+    April 13<br>
+    April 14<br>
+    April 15<br>
+    April 16<br>
+    April 17<br>
+    April 18
+  </p><br>
+   <footer><center style="background-color:blue;color:white;">♣︎DEADBOXXES 2023-2023♣︎</center></footer>
 </body>
